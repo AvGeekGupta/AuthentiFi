@@ -417,9 +417,11 @@ const abiArray = [
 
 const address = '';
 
-const contract = web3.eth.contract(abiArray);
+// const contract = web3.eth.Contract(abiArray);
 
-const contractInstance = contract.at(address);
+// const contractInstance = contract.at(address);
+const contractInstance = new web3.eth.Contract(abiArray, address);
+
 web3.eth.defaultAccount = web3.eth.coinbase;
 
 // This function generates a QR code
