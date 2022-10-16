@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const session = require('express-session');
 const bcrypt = require('bcrypt');
 const bodyParser = require('body-parser');
@@ -40,8 +40,8 @@ app.use(bodyParser.urlencoded({
 // MySQL Connection
 const connection = mysql.createConnection({
     host: IP,
-    user: process.env.database_user,
-    password: process.env.database_password,
+    user: 'root',
+    password: 'Baz*1269',
     database: 'authentifi'
 });
 
@@ -49,13 +49,14 @@ connection.connect(function(err) {
     if (!err) {
         console.log('Connected to MySql!\n');
     } else {
+		console.log(err) 
         console.log('Not connected to MySql.\n');
     }
 });
 
 // Web3 connection
 const web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:7545'));
-console.log(`Talking with a geth server ${web3.version.api} \n`);
+console.log(`Talking with a geth server ${web3.version} \n`);
 
 const abiArray = [
 	{
@@ -560,7 +561,8 @@ app.post('/retailerSignup', (req, res) => {
     // Adding the retailer in MySQL
     connection.query('SELECT * FROM RETAILER WHERE retailerEmail = ? LIMIT 1', [retailerEmail], (error, results) => {
         if (error) {
-            callback(error);
+            // callback(error);
+			console.log(error)
             return res.status(400).send('Some SQL Error');
         }
         if (results.length) {
