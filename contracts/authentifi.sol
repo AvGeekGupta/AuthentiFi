@@ -1,4 +1,5 @@
-pragma solidity ^0.4.22;
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.4.22 <0.9.0;
 pragma experimental ABIEncoderV2;
 
 // Data for testing the functions
@@ -70,8 +71,8 @@ contract Authentifi {
     }
 */
     // Function to create a new code for the product
-    function createCode(string _code, string _brand, string _model, uint _status, string _description, string _manufactuerName, string _manufactuerLocation, string _manufactuerTimestamp) public payable returns (uint) {
-        codeObj newCode;
+    function createCode(string memory _code, string memory _brand, string memory _model, uint _status, string memory _description, string memory _manufactuerName, string memory _manufactuerLocation, string memory _manufactuerTimestamp) public payable returns (uint) {
+        codeObj memory newCode;
         newCode.brand = _brand;
         newCode.model = _model;
         newCode.status = _status;
@@ -84,27 +85,27 @@ contract Authentifi {
     }
 
     // Function for showing product details if the person scanning the product is not the owner
-    function getNotOwnedCodeDetails(string _code) public view returns (string, string, uint, string, string, string, string) {
+    function getNotOwnedCodeDetails(string memory _code) public view returns (string memory, string memory, uint, string memory, string memory, string memory, string memory) {
         return (codeArr[_code].brand, codeArr[_code].model, codeArr[_code].status, codeArr[_code].description, codeArr[_code].manufactuerName, codeArr[_code].manufactuerLocation, codeArr[_code].manufactuerTimestamp);
     }
 
     // Function for showing product details if the person scanning the product is the owner
-    function getOwnedCodeDetails(string _code) public view returns (string, string) {
+    function getOwnedCodeDetails(string memory _code) public view returns (string memory, string memory) {
         return (retailerArr[codeArr[_code].retailer].name, retailerArr[codeArr[_code].retailer].location);
     }
 
     // Function for creating a new retailer
-    function addRetailerToCode(string _code, string _hashedEmailRetailer) public payable returns (uint) {
+    function addRetailerToCode(string memory _code, string memory _hashedEmailRetailer) public payable returns (uint) {
         codeArr[_code].retailer = _hashedEmailRetailer;
         return 1;
     }
 
     // Function for creating a new customer
-    function createCustomer(string _hashedEmail, string _name, string _phone) public payable returns (bool) {
+    function createCustomer(string memory _hashedEmail, string memory _name, string memory _phone) public payable returns (bool) {
         if (customerArr[_hashedEmail].isValue) {
             return false;
         }
-        customerObj newCustomer;
+        customerObj memory newCustomer;
         newCustomer.name = _name;
         newCustomer.phone = _phone;
         newCustomer.isValue = true;
@@ -112,24 +113,24 @@ contract Authentifi {
         return true;
     }
 
-    function getCustomerDetails(string _code) public view returns (string, string) {
+    function getCustomerDetails(string memory _code) public view returns (string memory, string memory) {
         return (customerArr[_code].name, customerArr[_code].phone);
     }
 
-    function createRetailer(string _hashedEmail, string _retailerName, string _retailerLocation) public payable returns (uint) {
-        retailerObj newRetailer;
+    function createRetailer(string memory _hashedEmail, string memory _retailerName, string memory _retailerLocation) public payable returns (uint) {
+        retailerObj memory newRetailer;
         newRetailer.name = _retailerName;
         newRetailer.location = _retailerLocation;
         retailerArr[_hashedEmail] = newRetailer;
         return 1;
     }
 
-    function getRetailerDetails(string _code) public view returns (string, string) {
+    function getRetailerDetails(string memory _code) public view returns (string memory, string memory) {
         return (retailerArr[_code].name, retailerArr[_code].location);
     }
 
     // Function to report stolen
-    function reportStolen(string _code, string _customer) public payable returns (bool) {
+    function reportStolen(string memory _code, string memory _customer) public payable returns (bool) {
         uint i;
         // Checking if the customer exists
         if (customerArr[_customer].isValue) {
@@ -144,7 +145,7 @@ contract Authentifi {
         return false;
     }
 
-    function changeOwner(string _code, string _oldCustomer, string _newCustomer) public payable returns (bool) {
+    function changeOwner(string memory _code, string memory _oldCustomer, string memory _newCustomer) public payable returns (bool) {
         uint i;
         bool flag = false;
          //Creating objects for code,oldCustomer,newCustomer
@@ -195,7 +196,7 @@ contract Authentifi {
     }
 
 
-    function initialOwner(string _code, string _retailer, string _customer) public payable returns(bool) {
+    function initialOwner(string memory _code, string memory _retailer, string memory _customer) public payable returns(bool) {
             uint i;
             if (compareStrings(codeArr[_code].retailer, _retailer)) {       // Check if retailer owns the prodct
                 if (customerArr[_customer].isValue) {                       // Check if Customer has an account
@@ -216,14 +217,14 @@ contract Authentifi {
         }
 
     // Given a customer returns all the product codes he owwns
-    function getCodes(string _customer) public view returns(string[]) {
+    function getCodes(string memory _customer) public view returns(string[]  memory) {
         return customerArr[_customer].code;
     }
 
     // Cannot directly compare strings in Solidity
     // This function hashes the 2 strings and then compares the 2 hashes
-    function compareStrings(string a, string b) internal returns (bool) {
-    	return keccak256(a) == keccak256(b);
+    function compareStrings(string memory a, string memory b) pure internal returns (bool) {
+    	return keccak256(abi.encodePacked(a)) == keccak256(abi.encodePacked(b));
     }
 
     // Function to delete an element from an array
@@ -235,12 +236,12 @@ contract Authentifi {
             array[i] = array[i+1];
         }
         delete array[array.length-1];
-        array.length--;
+        array.pop();
         return true;
     }
 
     // Function to convert string to bytes32
-    function stringToBytes32(string memory source) internal returns (bytes32 result) {
+    function stringToBytes32(string memory source) pure internal returns (bytes32 result) {
         bytes memory tempEmptyStringTest = bytes(source);
         if (tempEmptyStringTest.length == 0) {
             return 0x0;

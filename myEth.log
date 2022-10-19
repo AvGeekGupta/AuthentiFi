@@ -1,73 +1,154 @@
-INFO [10-16|21:18:15.838] Maximum peer count                       ETH=50 LES=0 total=50
-INFO [10-16|21:18:15.845] Set global gas cap                       cap=50,000,000
-INFO [10-16|21:18:15.850] Allocated trie memory caches             clean=154.00MiB dirty=256.00MiB
-INFO [10-16|21:18:15.850] Allocated cache and file handles         database=C:\Users\Namit\Documents\GitHub\AuthentiFi\myDataDir\geth\chaindata cache=512.00MiB handles=8192
-INFO [10-16|21:18:15.939] Opened ancient database                  database=C:\Users\Namit\Documents\GitHub\AuthentiFi\myDataDir\geth\chaindata\ancient/chain readonly=false
-INFO [10-16|21:18:15.940]  
-INFO [10-16|21:18:15.940] --------------------------------------------------------------------------------------------------------------------------------------------------------- 
-INFO [10-16|21:18:15.940] Chain ID:  4777 (unknown) 
-INFO [10-16|21:18:15.940] Consensus: unknown 
-INFO [10-16|21:18:15.940]  
-INFO [10-16|21:18:15.940] Pre-Merge hard forks: 
-INFO [10-16|21:18:15.940]  - Homestead:                   0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/homestead.md) 
-INFO [10-16|21:18:15.940]  - Tangerine Whistle (EIP 150): 0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/tangerine-whistle.md) 
-INFO [10-16|21:18:15.940]  - Spurious Dragon/1 (EIP 155): 0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/spurious-dragon.md) 
-INFO [10-16|21:18:15.940]  - Spurious Dragon/2 (EIP 158): 0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/spurious-dragon.md) 
-INFO [10-16|21:18:15.940]  - Byzantium:                   <nil> (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/byzantium.md) 
-INFO [10-16|21:18:15.940]  - Constantinople:              <nil> (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/constantinople.md) 
-INFO [10-16|21:18:15.940]  - Petersburg:                  <nil> (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/petersburg.md) 
-INFO [10-16|21:18:15.940]  - Istanbul:                    <nil> (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/istanbul.md) 
-INFO [10-16|21:18:15.940]  - Berlin:                      <nil> (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/berlin.md) 
-INFO [10-16|21:18:15.940]  - London:                      <nil> (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/london.md) 
-INFO [10-16|21:18:15.940]  
-INFO [10-16|21:18:15.940] The Merge is not yet available for this network! 
-INFO [10-16|21:18:15.940]  - Hard-fork specification: https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md 
-INFO [10-16|21:18:15.940] --------------------------------------------------------------------------------------------------------------------------------------------------------- 
-INFO [10-16|21:18:15.940]  
-INFO [10-16|21:18:15.942] Disk storage enabled for ethash caches   dir=C:\Users\Namit\Documents\GitHub\AuthentiFi\myDataDir\geth\ethash count=3
-INFO [10-16|21:18:15.942] Disk storage enabled for ethash DAGs     dir=C:\Users\Namit\AppData\Local\Ethash count=2
-INFO [10-16|21:18:15.942] Initialising Ethereum protocol           network=1114 dbversion=<nil>
-INFO [10-16|21:18:15.943] Loaded most recent local header          number=0 hash=5704d0..9bc5b0 td=256 age=53y6mo3w
-INFO [10-16|21:18:15.943] Loaded most recent local full block      number=0 hash=5704d0..9bc5b0 td=256 age=53y6mo3w
-INFO [10-16|21:18:15.943] Loaded most recent local fast block      number=0 hash=5704d0..9bc5b0 td=256 age=53y6mo3w
-WARN [10-16|21:18:15.943] Failed to load snapshot, regenerating    err="missing or corrupted snapshot"
-INFO [10-16|21:18:15.943] Rebuilding state snapshot 
-INFO [10-16|21:18:15.943] Resuming state snapshot generation       root=56e81f..63b421 accounts=0 slots=0 storage=0.00B dangling=0 elapsed=0s
-INFO [10-16|21:18:15.944] Generated state snapshot                 accounts=0 slots=0 storage=0.00B dangling=0 elapsed="505.2µs"
-INFO [10-16|21:18:15.946] Regenerated local transaction journal    transactions=0 accounts=0
-INFO [10-16|21:18:15.946] Gasprice oracle is ignoring threshold set threshold=2
-WARN [10-16|21:18:15.946] Error reading unclean shutdown markers   error="leveldb: not found"
-WARN [10-16|21:18:15.946] Engine API enabled                       protocol=eth
-WARN [10-16|21:18:15.946] Engine API started but chain not configured for merge yet 
-INFO [10-16|21:18:15.946] Starting peer-to-peer node               instance=Geth/v1.10.25-stable-69568c55/windows-amd64/go1.18.5
-INFO [10-16|21:18:15.961] New local node record                    seq=1,665,935,295,959 id=0788cd2919c82396 ip=127.0.0.1 udp=30303 tcp=30303
-INFO [10-16|21:18:15.961] Started P2P networking                   self=enode://727d1a940e6055abbb0e1990c4eeaddd53868ae4a06237c0f5f4c33ae47d8f14dc2b4b0ff9b52c37179cd39406c34cd6f86f34a05b5ff564efb015b293cc62fc@127.0.0.1:30303
-INFO [10-16|21:18:15.963] IPC endpoint opened                      url=\\.\pipe\geth.ipc
-INFO [10-16|21:18:15.964] Generated JWT secret                     path=C:\Users\Namit\Documents\GitHub\AuthentiFi\myDataDir\geth\jwtsecret
-INFO [10-16|21:18:15.968] WebSocket enabled                        url=ws://127.0.0.1:8551
-INFO [10-16|21:18:15.968] HTTP server started                      endpoint=127.0.0.1:8551 auth=true prefix= cors=localhost vhosts=localhost
-WARN [10-16|21:18:16.003] Served eth_coinbase                      reqid=3 duration=0s err="etherbase must be explicitly specified"
-INFO [10-16|21:18:18.421] New local node record                    seq=1,665,935,295,960 id=0788cd2919c82396 ip=100.81.86.20 udp=30303 tcp=30303
-INFO [10-16|21:18:18.749] Mapped network port                      proto=tcp extport=30303 intport=30303 interface="UPNP IGDv1-IP1"
-WARN [10-16|21:18:22.452] Served eth_coinbase                      reqid=9 duration=0s err="etherbase must be explicitly specified"
-INFO [10-16|21:18:25.992] Looking for peers                        peercount=2 tried=124 static=0
-WARN [10-16|21:18:26.791] Snapshot extension registration failed   peer=2e4e37b2 err="peer connected on snap without compatible eth support"
-WARN [10-16|21:18:28.270] Snapshot extension registration failed   peer=2e150a78 err="peer connected on snap without compatible eth support"
-INFO [10-16|21:18:36.485] Looking for peers                        peercount=0 tried=74  static=0
-INFO [10-16|21:18:47.218] Looking for peers                        peercount=0 tried=103 static=0
-INFO [10-16|21:18:57.677] Looking for peers                        peercount=0 tried=108 static=0
-INFO [10-16|21:19:05.623] Your new key was generated               address=0x4aC79B14cb87db1167a6a201738C5db9289a8EB7
-WARN [10-16|21:19:05.623] Please backup your key file!             path=C:\Users\Namit\Documents\GitHub\AuthentiFi\myDataDir\keystore\UTC--2022-10-16T15-49-03.951449000Z--4ac79b14cb87db1167a6a201738c5db9289a8eb7
-WARN [10-16|21:19:05.623] Please remember your password! 
-INFO [10-16|21:19:07.569] Etherbase automatically configured       address=0x4aC79B14cb87db1167a6a201738C5db9289a8EB7
-INFO [10-16|21:19:07.749] Looking for peers                        peercount=0 tried=145 static=0
-WARN [10-16|21:19:12.461] HTTP server graceful shutdown timed out 
-INFO [10-16|21:19:12.461] HTTP server stopped                      endpoint=127.0.0.1:8551
-INFO [10-16|21:19:12.462] IPC endpoint closed                      url=\\.\pipe\geth.ipc
-INFO [10-16|21:19:12.462] Ethereum protocol stopped 
-INFO [10-16|21:19:12.462] Transaction pool stopped 
-INFO [10-16|21:19:12.462] Writing snapshot state to disk           root=56e81f..63b421
-INFO [10-16|21:19:12.462] Persisted trie from memory database      nodes=0 size=0.00B time=0s gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
-INFO [10-16|21:19:12.462] Writing clean trie cache to disk         path=C:\Users\Namit\Documents\GitHub\AuthentiFi\myDataDir\geth\triecache threads=8
-INFO [10-16|21:19:12.469] Persisted the clean trie cache           path=C:\Users\Namit\Documents\GitHub\AuthentiFi\myDataDir\geth\triecache elapsed=7.150ms
-INFO [10-16|21:19:12.469] Blockchain stopped 
+INFO [10-19|17:54:49.627] Maximum peer count                       ETH=50 LES=0 total=50
+INFO [10-19|17:54:49.634] Set global gas cap                       cap=50,000,000
+INFO [10-19|17:54:49.639] Allocated trie memory caches             clean=154.00MiB dirty=256.00MiB
+INFO [10-19|17:54:49.639] Allocated cache and file handles         database=C:\Users\Namit\Documents\GitHub\AuthentiFi\myDataDir\geth\chaindata cache=512.00MiB handles=8192
+INFO [10-19|17:54:49.670] Opened ancient database                  database=C:\Users\Namit\Documents\GitHub\AuthentiFi\myDataDir\geth\chaindata\ancient/chain readonly=false
+INFO [10-19|17:54:49.671]  
+INFO [10-19|17:54:49.671] --------------------------------------------------------------------------------------------------------------------------------------------------------- 
+INFO [10-19|17:54:49.671] Chain ID:  4777 (unknown) 
+INFO [10-19|17:54:49.671] Consensus: unknown 
+INFO [10-19|17:54:49.671]  
+INFO [10-19|17:54:49.672] Pre-Merge hard forks: 
+INFO [10-19|17:54:49.672]  - Homestead:                   0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/homestead.md) 
+INFO [10-19|17:54:49.672]  - Tangerine Whistle (EIP 150): 0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/tangerine-whistle.md) 
+INFO [10-19|17:54:49.672]  - Spurious Dragon/1 (EIP 155): 0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/spurious-dragon.md) 
+INFO [10-19|17:54:49.672]  - Spurious Dragon/2 (EIP 158): 0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/spurious-dragon.md) 
+INFO [10-19|17:54:49.672]  - Byzantium:                   <nil> (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/byzantium.md) 
+INFO [10-19|17:54:49.672]  - Constantinople:              <nil> (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/constantinople.md) 
+INFO [10-19|17:54:49.672]  - Petersburg:                  <nil> (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/petersburg.md) 
+INFO [10-19|17:54:49.672]  - Istanbul:                    <nil> (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/istanbul.md) 
+INFO [10-19|17:54:49.672]  - Berlin:                      <nil> (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/berlin.md) 
+INFO [10-19|17:54:49.672]  - London:                      <nil> (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/london.md) 
+INFO [10-19|17:54:49.672]  
+INFO [10-19|17:54:49.672] The Merge is not yet available for this network! 
+INFO [10-19|17:54:49.672]  - Hard-fork specification: https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md 
+INFO [10-19|17:54:49.672] --------------------------------------------------------------------------------------------------------------------------------------------------------- 
+INFO [10-19|17:54:49.672]  
+INFO [10-19|17:54:49.676] Disk storage enabled for ethash caches   dir=C:\Users\Namit\Documents\GitHub\AuthentiFi\myDataDir\geth\ethash count=3
+INFO [10-19|17:54:49.676] Disk storage enabled for ethash DAGs     dir=C:\Users\Namit\AppData\Local\Ethash count=2
+INFO [10-19|17:54:49.676] Initialising Ethereum protocol           network=1114 dbversion=8
+INFO [10-19|17:54:49.681] Loaded most recent local header          number=0 hash=5704d0..9bc5b0 td=256 age=53y6mo3w
+INFO [10-19|17:54:49.683] Loaded most recent local full block      number=0 hash=5704d0..9bc5b0 td=256 age=53y6mo3w
+INFO [10-19|17:54:49.683] Loaded most recent local fast block      number=0 hash=5704d0..9bc5b0 td=256 age=53y6mo3w
+INFO [10-19|17:54:49.683] Loaded local transaction journal         transactions=0 dropped=0
+INFO [10-19|17:54:49.691] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [10-19|17:54:49.692] Gasprice oracle is ignoring threshold set threshold=2
+WARN [10-19|17:54:49.693] Engine API enabled                       protocol=eth
+WARN [10-19|17:54:49.693] Engine API started but chain not configured for merge yet 
+INFO [10-19|17:54:49.694] Starting peer-to-peer node               instance=Geth/v1.10.25-stable-69568c55/windows-amd64/go1.18.5
+INFO [10-19|17:54:49.754] New local node record                    seq=1,666,182,264,306 id=b835b4a22a92f3dc ip=127.0.0.1 udp=30303 tcp=30303
+INFO [10-19|17:54:49.756] IPC endpoint opened                      url=\\.\pipe\geth.ipc
+INFO [10-19|17:54:49.756] Loaded JWT secret file                   path=C:\Users\Namit\Documents\GitHub\AuthentiFi\myDataDir\geth\jwtsecret crc32=0x9f768710
+INFO [10-19|17:54:49.758] Started P2P networking                   self=enode://df372b43bbb807e6f0827c4fe169d2fdeb90ece0972d32340822e40f1a9b641fd1daf751315c0905252ccb331a544895ec3c15f963d6e2509c7ad6a6e94e0a6d@127.0.0.1:30303
+INFO [10-19|17:54:49.774] WebSocket enabled                        url=ws://127.0.0.1:8551
+INFO [10-19|17:54:49.775] HTTP server started                      endpoint=127.0.0.1:8551 auth=true prefix= cors=localhost vhosts=localhost
+WARN [10-19|17:54:49.919] Served eth_coinbase                      reqid=3 duration=0s err="etherbase must be explicitly specified"
+INFO [10-19|17:54:52.267] New local node record                    seq=1,666,182,264,307 id=b835b4a22a92f3dc ip=100.81.95.52 udp=30303 tcp=30303
+INFO [10-19|17:54:52.606] Mapped network port                      proto=tcp extport=30303 intport=30303 interface="UPNP IGDv1-IP1"
+INFO [10-19|17:54:59.755] Looking for peers                        peercount=0 tried=136 static=0
+WARN [10-19|17:55:00.080] Snapshot extension registration failed   peer=569f3be3 err="peer connected on snap without compatible eth support"
+INFO [10-19|17:55:10.247] Looking for peers                        peercount=0 tried=71  static=0
+INFO [10-19|17:55:20.597] Looking for peers                        peercount=0 tried=125 static=0
+INFO [10-19|17:55:30.890] Looking for peers                        peercount=0 tried=89  static=0
+INFO [10-19|17:55:40.984] Looking for peers                        peercount=0 tried=110 static=0
+INFO [10-19|17:55:51.007] Looking for peers                        peercount=0 tried=99  static=0
+INFO [10-19|17:56:01.018] Looking for peers                        peercount=1 tried=94  static=0
+INFO [10-19|17:56:21.886] Looking for peers                        peercount=0 tried=79  static=0
+INFO [10-19|17:56:31.890] Looking for peers                        peercount=0 tried=94  static=0
+WARN [10-19|17:56:33.444] Snapshot extension registration failed   peer=98998f1a err="peer connected on snap without compatible eth support"
+WARN [10-19|17:56:49.600] Snapshot extension registration failed   peer=0a807721 err="peer connected on snap without compatible eth support"
+INFO [10-19|17:56:52.132] Looking for peers                        peercount=0 tried=101 static=0
+INFO [10-19|17:57:02.199] Looking for peers                        peercount=1 tried=98  static=0
+WARN [10-19|17:57:02.447] Snapshot extension registration failed   peer=e118b10a err="peer connected on snap without compatible eth support"
+INFO [10-19|17:57:12.378] Looking for peers                        peercount=1 tried=126 static=0
+INFO [10-19|17:57:16.089] Your new key was generated               address=0x96C9045e47B0D23a833BAFCdD125B153BE57c37b
+WARN [10-19|17:57:16.089] Please backup your key file!             path=C:\Users\Namit\Documents\GitHub\AuthentiFi\myDataDir\keystore\UTC--2022-10-19T12-27-14.422368600Z--96c9045e47b0d23a833bafcdd125b153be57c37b
+WARN [10-19|17:57:16.089] Please remember your password! 
+WARN [10-19|17:57:20.365] Snapshot extension registration failed   peer=dfa36cba err="peer connected on snap without compatible eth support"
+INFO [10-19|17:57:22.427] Looking for peers                        peercount=0 tried=106 static=0
+WARN [10-19|17:57:42.622] Snapshot extension registration failed   peer=ffc54465 err="peer connected on snap without compatible eth support"
+INFO [10-19|17:57:52.765] Looking for peers                        peercount=0 tried=83  static=0
+INFO [10-19|17:58:02.772] Looking for peers                        peercount=0 tried=95  static=0
+INFO [10-19|17:58:13.254] Looking for peers                        peercount=0 tried=90  static=0
+INFO [10-19|17:58:23.282] Looking for peers                        peercount=0 tried=83  static=0
+WARN [10-19|17:58:28.970] Snapshot extension registration failed   peer=6a0bcd3f err="peer connected on snap without compatible eth support"
+INFO [10-19|17:58:33.342] Looking for peers                        peercount=0 tried=124 static=0
+INFO [10-19|17:58:43.392] Looking for peers                        peercount=2 tried=107 static=0
+INFO [10-19|17:58:53.420] Looking for peers                        peercount=0 tried=118 static=0
+INFO [10-19|17:59:03.476] Looking for peers                        peercount=1 tried=94  static=0
+INFO [10-19|17:59:13.477] Looking for peers                        peercount=1 tried=142 static=0
+WARN [10-19|17:59:14.296] Snapshot extension registration failed   peer=6a0bcd3f err="peer connected on snap without compatible eth support"
+INFO [10-19|17:59:23.547] Looking for peers                        peercount=0 tried=145 static=0
+INFO [10-19|17:59:33.730] Looking for peers                        peercount=0 tried=101 static=0
+INFO [10-19|17:59:44.069] Looking for peers                        peercount=0 tried=106 static=0
+INFO [10-19|17:59:54.361] Looking for peers                        peercount=0 tried=91  static=0
+WARN [10-19|17:59:55.152] Snapshot extension registration failed   peer=98998f1a err="peer connected on snap without compatible eth support"
+INFO [10-19|18:00:04.371] Looking for peers                        peercount=1 tried=166 static=0
+WARN [10-19|18:00:11.215] Snapshot extension registration failed   peer=a05e766c err="peer connected on snap without compatible eth support"
+WARN [10-19|18:00:12.306] Snapshot extension registration failed   peer=a20727fa err="peer connected on snap without compatible eth support"
+INFO [10-19|18:00:14.683] Looking for peers                        peercount=1 tried=114 static=0
+INFO [10-19|18:00:24.741] Looking for peers                        peercount=0 tried=82  static=0
+INFO [10-19|18:00:35.376] Looking for peers                        peercount=0 tried=96  static=0
+WARN [10-19|18:00:40.307] Snapshot extension registration failed   peer=ffc54465 err="peer connected on snap without compatible eth support"
+INFO [10-19|18:00:45.401] Looking for peers                        peercount=2 tried=117 static=0
+INFO [10-19|18:01:05.456] Looking for peers                        peercount=2 tried=132 static=0
+INFO [10-19|18:01:15.465] Looking for peers                        peercount=1 tried=99  static=0
+INFO [10-19|18:01:25.649] Looking for peers                        peercount=0 tried=18  static=0
+INFO [10-19|18:01:35.768] Looking for peers                        peercount=1 tried=145 static=0
+WARN [10-19|18:01:39.614] Snapshot extension registration failed   peer=ffc54465 err="peer connected on snap without compatible eth support"
+INFO [10-19|18:01:46.396] Looking for peers                        peercount=0 tried=112 static=0
+INFO [10-19|18:01:56.399] Looking for peers                        peercount=1 tried=101 static=0
+WARN [10-19|18:02:01.607] Snapshot extension registration failed   peer=6a0bcd3f err="peer connected on snap without compatible eth support"
+INFO [10-19|18:02:06.469] Looking for peers                        peercount=1 tried=123 static=0
+INFO [10-19|18:02:16.644] Looking for peers                        peercount=0 tried=97  static=0
+INFO [10-19|18:02:26.683] Looking for peers                        peercount=1 tried=51  static=0
+INFO [10-19|18:02:46.726] Looking for peers                        peercount=1 tried=115 static=0
+INFO [10-19|18:02:56.921] Looking for peers                        peercount=0 tried=116 static=0
+WARN [10-19|18:03:01.256] Snapshot extension registration failed   peer=2b236036 err="peer connected on snap without compatible eth support"
+INFO [10-19|18:03:06.926] Looking for peers                        peercount=0 tried=105 static=0
+INFO [10-19|18:03:16.957] Looking for peers                        peercount=0 tried=108 static=0
+INFO [10-19|18:03:27.023] Looking for peers                        peercount=0 tried=91  static=0
+INFO [10-19|18:03:37.042] Looking for peers                        peercount=1 tried=102 static=0
+INFO [10-19|18:03:47.045] Looking for peers                        peercount=1 tried=122 static=0
+INFO [10-19|18:03:57.047] Looking for peers                        peercount=0 tried=110 static=0
+WARN [10-19|18:03:59.377] Snapshot extension registration failed   peer=6a0bcd3f err="peer connected on snap without compatible eth support"
+INFO [10-19|18:04:07.142] Looking for peers                        peercount=0 tried=110 static=0
+WARN [10-19|18:04:09.488] Snapshot extension registration failed   peer=ba83bd0f err="peer connected on snap without compatible eth support"
+WARN [10-19|18:04:10.311] Snapshot extension registration failed   peer=a05e766c err="peer connected on snap without compatible eth support"
+INFO [10-19|18:04:17.226] Looking for peers                        peercount=0 tried=95  static=0
+INFO [10-19|18:04:27.228] Looking for peers                        peercount=1 tried=117 static=0
+INFO [10-19|18:04:37.233] Looking for peers                        peercount=2 tried=135 static=0
+INFO [10-19|18:04:47.309] Looking for peers                        peercount=2 tried=96  static=0
+INFO [10-19|18:04:57.587] Looking for peers                        peercount=0 tried=134 static=0
+INFO [10-19|18:05:07.607] Looking for peers                        peercount=0 tried=21  static=0
+INFO [10-19|18:05:18.556] Looking for peers                        peercount=0 tried=114 static=0
+INFO [10-19|18:05:28.575] Looking for peers                        peercount=0 tried=96  static=0
+INFO [10-19|18:05:38.708] Looking for peers                        peercount=1 tried=120 static=0
+WARN [10-19|18:05:46.509] Snapshot extension registration failed   peer=6a0bcd3f err="peer connected on snap without compatible eth support"
+INFO [10-19|18:05:48.755] Looking for peers                        peercount=0 tried=133 static=0
+INFO [10-19|18:05:58.761] Looking for peers                        peercount=2 tried=101 static=0
+INFO [10-19|18:06:08.870] Looking for peers                        peercount=1 tried=96  static=0
+INFO [10-19|18:06:19.175] Looking for peers                        peercount=0 tried=61  static=0
+INFO [10-19|18:06:29.723] Looking for peers                        peercount=0 tried=68  static=0
+INFO [10-19|18:06:39.882] Looking for peers                        peercount=1 tried=50  static=0
+WARN [10-19|18:06:47.013] Snapshot extension registration failed   peer=ba83bd0f err="peer connected on snap without compatible eth support"
+INFO [10-19|18:06:49.888] Looking for peers                        peercount=0 tried=123 static=0
+INFO [10-19|18:06:59.892] Looking for peers                        peercount=1 tried=134 static=0
+INFO [10-19|18:07:09.959] Looking for peers                        peercount=1 tried=117 static=0
+WARN [10-19|18:07:24.914] Snapshot extension registration failed   peer=04dfa983 err="peer connected on snap without compatible eth support"
+INFO [10-19|18:07:29.983] Looking for peers                        peercount=1 tried=137 static=0
+INFO [10-19|18:07:39.985] Looking for peers                        peercount=1 tried=148 static=0
+WARN [10-19|18:07:48.177] Snapshot extension registration failed   peer=decab1a9 err="peer connected on snap without compatible eth support"
+INFO [10-19|18:07:50.156] Looking for peers                        peercount=0 tried=116 static=0
+INFO [10-19|18:08:00.682] Looking for peers                        peercount=0 tried=22  static=0
+WARN [10-19|18:08:09.928] Snapshot extension registration failed   peer=6a0bcd3f err="peer connected on snap without compatible eth support"
+WARN [10-19|18:08:10.807] HTTP server graceful shutdown timed out 
+INFO [10-19|18:08:10.807] HTTP server stopped                      endpoint=127.0.0.1:8551
+INFO [10-19|18:08:10.808] IPC endpoint closed                      url=\\.\pipe\geth.ipc
+INFO [10-19|18:08:11.106] Ethereum protocol stopped 
+INFO [10-19|18:08:11.106] Transaction pool stopped 
+INFO [10-19|18:08:11.106] Writing snapshot state to disk           root=56e81f..63b421
+INFO [10-19|18:08:11.106] Persisted trie from memory database      nodes=0 size=0.00B time=0s gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [10-19|18:08:11.106] Writing clean trie cache to disk         path=C:\Users\Namit\Documents\GitHub\AuthentiFi\myDataDir\geth\triecache threads=8
+INFO [10-19|18:08:11.114] Persisted the clean trie cache           path=C:\Users\Namit\Documents\GitHub\AuthentiFi\myDataDir\geth\triecache elapsed=7.259ms
+INFO [10-19|18:08:11.114] Blockchain stopped 

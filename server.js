@@ -416,7 +416,7 @@ const abiArray = [
 	}
 ];
 
-const address = '';
+const address = '0x96c9045e47b0d23a833bafcdd125b153be57c37b';
 
 // const contract = web3.eth.Contract(abiArray);
 
@@ -587,8 +587,8 @@ app.post('/retailerSignup', (req, res) => {
 });
 
 // Add retailer to Blockchain
-function createRetailer(retailerHashedEmail, retailerName, retailerLocation) {
-    return contractInstance.createRetailer(retailerHashedEmail, retailerName, retailerLocation,
+const createRetailer = (retailerHashedEmail, retailerName, retailerLocation) => {
+   return contractInstance.createRetailer(retailerHashedEmail, retailerName, retailerLocation,
                                         { from: web3.eth.accounts[0], gas: 3000000 });
 }
 
