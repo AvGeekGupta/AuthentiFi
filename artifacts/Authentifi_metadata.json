@@ -1,0 +1,404 @@
+{
+	"compiler": {
+		"version": "0.8.6+commit.11564f7e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_code",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_hashedEmailRetailer",
+						"type": "string"
+					}
+				],
+				"name": "addRetailerToCode",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_code",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_oldCustomer",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_newCustomer",
+						"type": "string"
+					}
+				],
+				"name": "changeOwner",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_code",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_brand",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_model",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_status",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_description",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_manufactuerName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_manufactuerLocation",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_manufactuerTimestamp",
+						"type": "string"
+					}
+				],
+				"name": "createCode",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_hashedEmail",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_phone",
+						"type": "string"
+					}
+				],
+				"name": "createCustomer",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_hashedEmail",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_retailerName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_retailerLocation",
+						"type": "string"
+					}
+				],
+				"name": "createRetailer",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_customer",
+						"type": "string"
+					}
+				],
+				"name": "getCodes",
+				"outputs": [
+					{
+						"internalType": "string[]",
+						"name": "",
+						"type": "string[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_code",
+						"type": "string"
+					}
+				],
+				"name": "getCustomerDetails",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_code",
+						"type": "string"
+					}
+				],
+				"name": "getNotOwnedCodeDetails",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_code",
+						"type": "string"
+					}
+				],
+				"name": "getOwnedCodeDetails",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_code",
+						"type": "string"
+					}
+				],
+				"name": "getRetailerDetails",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_code",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_retailer",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_customer",
+						"type": "string"
+					}
+				],
+				"name": "initialOwner",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_code",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_customer",
+						"type": "string"
+					}
+				],
+				"name": "reportStolen",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts\\authentifi.sol": "Authentifi"
+		},
+		"evmVersion": "berlin",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts\\authentifi.sol": {
+			"keccak256": "0x99355ecca9a906ca94d3d97533c81f36be4205aff796316d8f26097dfb6acc42",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://465c063fcd4ef4b21a71d1e3515e59b410691835aabfafac42d528335684fcf6",
+				"dweb:/ipfs/QmdbAw5ALPqDGb5wZVFcqyiz1JYK2J26eqqaz89nLBeJbJ"
+			]
+		}
+	},
+	"version": 1
+}
