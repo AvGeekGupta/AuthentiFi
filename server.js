@@ -43,7 +43,7 @@ app.use(
 const connection = mysql.createConnection({
 	host: IP,
 	user: "root",
-	password: "chocoS@41",
+	password: "root",
 	database: "authentifi",
 });
 
@@ -550,14 +550,14 @@ app.post("/login", (req, res) => {
 						let pass = results[0].Password;
 						if (bcrypt.compareSync(password, pass)) {
 							console.log(`Login successful with ${email} \n`);
-							return res.status(200).send("Login successful!");
+							return res.status(200).send("Login Success");
 						}
-						return res.status(400).send("Login failed.");
+						return res.status(200);
 					}
 				);
 			}
 			console.log("Email does not exist!\n");
-			return res.status(400).send("Email does not exist!");
+			return res.status(400);
 		}
 	);
 });
@@ -714,7 +714,7 @@ app.post("/addRetailerToCode", (req, res) => {
  * Receive:     JSON array of objects which contain brand, model, description, status, manufacturerName,manufacturerLocation,
  *                                                  manufacturerTimestamp, retailerName, retailerLocation, retailerTimestamp
  */
-app.post("/myAssets", (req, res) => {
+app.post("/myAssets", async (req, res) => {
 	console.log("Request to /myAssets\n");
 	let myAssetsArray = [];
 	let email = req.body.email;
@@ -743,7 +743,7 @@ app.post("/myAssets", (req, res) => {
 			retailerTimestamp: ownedCodeDetails[2],
 		});
 	}
-	res.status(200).send(JSON.parse(JSON.stringify(myAssetsArray)));
+	await res.status(200).send(JSON.parse(JSON.stringify(myAssetsArray)));
 });
 
 /**

@@ -29,6 +29,7 @@
   "homepage": "https://github.com/kylelobo/AuthentiFi#readme",
   "dependencies": {
     "bcrypt": "^5.1.0",
+    "circular-json": "^0.5.9",
     "crypto": "^1.0.1",
     "debug": "^4.3.4",
     "express": "^4.18.2",

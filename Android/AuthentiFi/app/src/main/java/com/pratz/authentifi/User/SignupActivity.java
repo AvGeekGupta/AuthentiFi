@@ -120,15 +120,15 @@ public class SignupActivity extends AppCompatActivity {
 			ConnectionManager.sendData(requestBody, requestQueue, URL, new ConnectionManager.VolleyCallback() {
 				@Override
 				public void onSuccessResponse(String result) {
-					finish();
+					Toast toast = Toast.makeText(SignupActivity.this, "kuch bhi", Toast.LENGTH_LONG);
+
+					toast.show();
 				}
 
 				@Override
 				public void onErrorResponse(VolleyError error) {
 
-					Toast toast = Toast.makeText(SignupActivity.this,
-							"Could not connect to server, please try again.",
-							Toast.LENGTH_LONG);
+					Toast toast = Toast.makeText(SignupActivity.this, "Could not connect to server, please try again.", Toast.LENGTH_LONG);
 
 					toast.show();
 
