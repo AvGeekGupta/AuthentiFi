@@ -1,5 +1,0 @@
-
-eth.coinbase
-eth.getBalance(eth.coinbase)
-miner.start()
-eth.mining

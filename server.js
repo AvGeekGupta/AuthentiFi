@@ -418,7 +418,7 @@ const abiArray = [
 	},
 ];
 
-const address = "d5b880653fc9977369398e4a3055f7233f5e0cc4";
+const address = "0x449f918b2738d2756e342e034a4bda36994ef9e5";
 
 // const contract = web3.eth.Contract(abiArray);
 
@@ -707,6 +707,19 @@ app.post("/addRetailerToCode", (req, res) => {
 	return res.status(200).send("Success");
 });
 
+const getCircularReplacer = () => {
+	const seen = new WeakSet();
+	return (key, value) => {
+	  if (typeof value === 'object' && value !== null) {
+		if (seen.has(value)) {
+		  return;
+		}
+		seen.add(value);
+	  }
+	  return value;
+	};
+  };
+
 /**
  * Description: Lists all the assets owned by the user
  * Request:     POST /myAssets
@@ -714,7 +727,7 @@ app.post("/addRetailerToCode", (req, res) => {
  * Receive:     JSON array of objects which contain brand, model, description, status, manufacturerName,manufacturerLocation,
  *                                                  manufacturerTimestamp, retailerName, retailerLocation, retailerTimestamp
  */
-app.post("/myAssets", async (req, res) => {
+app.post("/myAssets", (req, res) => {
 	console.log("Request to /myAssets\n");
 	let myAssetsArray = [];
 	let email = req.body.email;
@@ -743,7 +756,7 @@ app.post("/myAssets", async (req, res) => {
 			retailerTimestamp: ownedCodeDetails[2],
 		});
 	}
-	await res.status(200).send(JSON.parse(JSON.stringify(myAssetsArray)));
+	res.status(200).send(JSON.parse(JSON.stringify(myAssetsArray, getCircularReplacer())));
 });
 
 /**
@@ -952,16 +965,14 @@ app.post("/buyerConfirm", (req, res) => {
 							code,
 							hashedSellerEmail,
 							hashedBuyerEmail,
-							{ from: web3.eth.accounts[0], gas: 3000000 }
-						);
+							);
 					} else {
 						console.log("Performing transaction for customer\n");
 						ok = contractInstance.methods.changeOwner(
 							code,
 							hashedSellerEmail,
 							hashedBuyerEmail,
-							{ from: web3.eth.accounts[0], gas: 3000000 }
-						);
+							);
 					}
 					if (!ok) {
 						return res.status(400).send("Error");
@@ -985,8 +996,7 @@ function initialOwner(code, retailerHashedEmail, customerHashedEmail) {
 	return contractInstance.methods.initialOwner(
 		code,
 		retailerHashedEmail,
-		customerHashedEmail,
-		{ from: web3.eth.accounts[0], gas: 3000000 }
+		customerHashedEmail
 	);
 }
 
@@ -996,7 +1006,6 @@ function changeOwner(code, oldOwnerHashedEmail, newOwnerHashedEmail) {
 		code,
 		oldOwnerHashedEmail,
 		newOwnerHashedEmail,
-		{ from: web3.eth.accounts[0], gas: 3000000 }
 	);
 }
 
