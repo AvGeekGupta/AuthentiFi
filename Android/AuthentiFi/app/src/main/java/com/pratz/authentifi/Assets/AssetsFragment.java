@@ -99,6 +99,11 @@ public class AssetsFragment extends Fragment {
 					jsonArray.remove(0);
 					JSONObject tempObject;
 					assetList.clear();
+					Toast toast = Toast.makeText(getContext(),
+							"Product Verified through Blockchain.",
+							Toast.LENGTH_LONG);
+
+					toast.show();
 					for(int i=0; i<jsonArray.length(); i++) {
 
 						tempObject = jsonArray.getJSONObject(i);
